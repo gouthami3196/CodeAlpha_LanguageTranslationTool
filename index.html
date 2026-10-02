@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LinguaSpark - Language Translation Tool</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            🌐 LinguaSpark
+        </div>
+
+        <p>Smart Translation & Pronunciation Assistant</p>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <h1>Language Translation Tool</h1>
+
+            <p>
+                Translate text instantly between multiple languages.
+                Listen, copy, download and save your translations.
+            </p>
+        </section>
+
+
+        <!-- Translation Box -->
+        <section class="translator-card">
+
+            <div class="language-row">
+
+                <div class="language-box">
+                    <label for="sourceLanguage">Translate From</label>
+
+                    <select id="sourceLanguage">
+                        <option value="en">English</option>
+                        <option value="te">Telugu</option>
+                        <option value="hi">Hindi</option>
+                        <option value="ta">Tamil</option>
+                        <option value="kn">Kannada</option>
+                        <option value="ml">Malayalam</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="es">Spanish</option>
+                        <option value="it">Italian</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="ru">Russian</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="zh-CN">Chinese</option>
+                    </select>
+                </div>
+
+
+                <button id="swapButton" class="swap-button" title="Swap languages">
+                    ⇄
+                </button>
+
+
+                <div class="language-box">
+                    <label for="targetLanguage">Translate To</label>
+
+                    <select id="targetLanguage">
+                        <option value="te">Telugu</option>
+                        <option value="en">English</option>
+                        <option value="hi">Hindi</option>
+                        <option value="ta">Tamil</option>
+                        <option value="kn">Kannada</option>
+                        <option value="ml">Malayalam</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="es">Spanish</option>
+                        <option value="it">Italian</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="ru">Russian</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="zh-CN">Chinese</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div class="translation-area">
+
+                <!-- Input -->
+                <div class="text-panel">
+
+                    <div class="panel-header">
+                        <h3>Enter Text</h3>
+
+                        <span id="characterCount">
+                            0 / 5000
+                        </span>
+                    </div>
+
+                    <textarea
+                        id="inputText"
+                        maxlength="5000"
+                        placeholder="Type or paste your text here..."
+                    ></textarea>
+
+                    <button id="clearButton" class="secondary-button">
+                        🗑 Clear
+                    </button>
+
+                </div>
+
+
+                <!-- Output -->
+                <div class="text-panel">
+
+                    <div class="panel-header">
+                        <h3>Translation</h3>
+
+                        <span id="statusMessage">
+                            Ready
+                        </span>
+                    </div>
+
+                    <div
+                        id="translatedText"
+                        class="translation-output"
+                    >
+                        Your translation will appear here...
+                    </div>
+
+                    <div class="action-buttons">
+
+                        <button id="copyButton">
+                            📋 Copy
+                        </button>
+
+                        <button id="speakButton">
+                            🔊 Listen
+                        </button>
+
+                        <button id="downloadButton">
+                            ⬇ Download
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="translateButton"
+                class="translate-button"
+            >
+                🌐 Translate
+            </button>
+
+        </section>
+
+
+        <!-- Features -->
+        <section class="features">
+
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Multiple Languages</h3>
+                <p>
+                    Translate between many popular languages.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="feature-icon">🔊</div>
+                <h3>Pronunciation</h3>
+                <p>
+                    Listen to translated text using text-to-speech.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Easy Copy</h3>
+                <p>
+                    Copy translated text with one click.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="feature-icon">🕘</div>
+                <h3>Translation History</h3>
+                <p>
+                    Automatically save your recent translations.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- History -->
+        <section class="history-section">
+
+            <div class="history-header">
+
+                <h2>Translation History</h2>
+
+                <button id="clearHistoryButton">
+                    Clear History
+                </button>
+
+            </div>
+
+            <div id="historyContainer">
+                <p class="empty-history">
+                    No translation history yet.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            © 2026 LinguaSpark | Language Translation Tool
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
